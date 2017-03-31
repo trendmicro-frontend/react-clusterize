@@ -1,6 +1,6 @@
 # react-clusterize [![build status](https://travis-ci.org/cheton/react-clusterize.svg?branch=master)](https://travis-ci.org/cheton/react-clusterize) [![Coverage Status](https://coveralls.io/repos/github/cheton/react-clusterize/badge.svg?branch=master)](https://coveralls.io/github/cheton/react-clusterize?branch=master)
 
-[![NPM](https://nodei.co/npm/cheton/react-clusterize.png?downloads=true&stars=true)](https://nodei.co/npm/cheton/react-clusterize/)
+[![NPM](https://nodei.co/npm/react-clusterize.png?downloads=true&stars=true)](https://nodei.co/npm/react-clusterize/)
 
 React Clusterize
 
