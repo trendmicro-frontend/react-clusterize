@@ -2,7 +2,7 @@
 
 [![NPM](https://nodei.co/npm/react-clusterize.png?downloads=true&stars=true)](https://nodei.co/npm/react-clusterize/)
 
-React Clusterize
+React component for [Clusterize.js](https://github.com/NeXTs/Clusterize.js/)
 
 Demo: https://cheton.github.io/react-clusterize
 
