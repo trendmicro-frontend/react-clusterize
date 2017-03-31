@@ -24,11 +24,11 @@
     "type": "git",
     "url": "git+https://github.com/cheton/react-clusterize.git"
   },
-  "author": "",
+  "author": "Cheton Wu <cheton@gmail.com>",
   "contributors": [
     {
-      "name": "",
-      "email": "",
+      "name": "Cheton Wu",
+      "email": "cheton@gmail.com",
       "url": "https://github.com/cheton"
     }
   ],
