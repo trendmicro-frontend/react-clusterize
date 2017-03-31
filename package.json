@@ -1,0 +1,91 @@
+{
+  "name": "react-clusterize",
+  "version": "0.1.0",
+  "description": "A Clusterize.js component for React",
+  "main": "lib/index.js",
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "scripts": {
+    "prepublish": "npm run lint && npm test && npm run clean && npm run bowersync && npm run build && npm run build-examples",
+    "bowersync": "./scripts/bowersync",
+    "build": "babel --out-dir ./lib ./src",
+    "build-examples": "cd examples; webpack",
+    "clean": "rm -f lib/*",
+    "demo": "http-server -p 8000 docs/",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint --fix ./src",
+    "test": "./babel-tap --coverage test/*.js",
+    "coveralls": "./babel-tap --coverage --coverage-report=text-lcov test/*.js | node_modules/.bin/coveralls",
+    "dev": "cd examples; webpack-dev-server --hot --inline --host 0.0.0.0 --port 8000 --content-base ../docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheton/react-clusterize.git"
+  },
+  "author": "",
+  "contributors": [
+    {
+      "name": "",
+      "email": "",
+      "url": "https://github.com/cheton"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cheton/react-clusterize/issues"
+  },
+  "homepage": "https://github.com/cheton/react-clusterize",
+  "keywords": [
+    "cluster",
+    "clusterize",
+    "list",
+    "react",
+    "react-clusterize",
+    "scroll",
+    "table"
+  ],
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0"
+  },
+  "dependencies": {
+    "clusterize.js": "^0.17.6"
+  },
+  "devDependencies": {
+    "@trendmicro/react-buttons": "^1.0.1",
+    "babel-cli": "~6.24.0",
+    "babel-core": "~6.24.0",
+    "babel-eslint": "~7.1.1",
+    "babel-loader": "~6.4.0",
+    "babel-plugin-transform-decorators-legacy": "~1.3.4",
+    "babel-preset-es2015": "~6.24.0",
+    "babel-preset-react": "~6.23.0",
+    "babel-preset-stage-0": "~6.22.0",
+    "coveralls": "~2.11.16",
+    "css-loader": "~0.27.3",
+    "eslint": "~3.17.1",
+    "eslint-config-trendmicro": "~0.5.1",
+    "eslint-loader": "~1.6.3",
+    "eslint-plugin-import": "~2.2.0",
+    "eslint-plugin-jsx-a11y": "~2.2.3",
+    "eslint-plugin-react": "~6.10.0",
+    "file-loader": "~0.10.1",
+    "html-webpack-plugin": "~2.28.0",
+    "http-server": "~0.9.0",
+    "nib": "~1.1.2",
+    "react": "^0.14.0 || ^15.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0",
+    "style-loader": "~0.13.2",
+    "stylint": "~1.5.9",
+    "stylint-loader": "~1.0.0",
+    "stylus-loader": "~3.0.1",
+    "tap": "~10.3.0",
+    "trendmicro-ui": "~0.3.0",
+    "url-loader": "~0.5.8",
+    "webpack": "~2.2.1",
+    "webpack-dev-server": "~2.4.1",
+    "which": "~1.2.12"
+  }
+}

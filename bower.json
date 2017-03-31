@@ -1,0 +1,23 @@
+{
+  "name": "react-clusterize",
+  "description": "A Clusterize.js component for React",
+  "authors": [
+    {
+      "name": "",
+      "email": "",
+      "homepage": "https://github.com/cheton"
+    }
+  ],
+  "homepage": "https://github.com/cheton/react-clusterize",
+  "snapshots": [],
+  "keywords": [
+    "cluster",
+    "clusterize",
+    "list",
+    "react",
+    "react-clusterize",
+    "scroll",
+    "table"
+  ],
+  "license": "MIT"
+}
