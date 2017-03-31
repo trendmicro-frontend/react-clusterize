@@ -17,11 +17,25 @@ Demo: https://cheton.github.io/react-clusterize
 ## Usage
 
 ```js
-<Clusterize
-    rows={rows}
-/>
-```
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Clusterize from 'react-clusterize';
 
+const rows = [];
+const maxRows = 10000;
+for (let i = 0; i < maxRows; ++i) {
+    rows[i] = (
+        <div style={{ borderBottom: '1px solid #f0f0f0', padding: '5px 10px' }}>
+            Item #{i + 1}
+        </div>
+    );
+}
+rows.length = maxRows;
+
+const mountNode = document.getElementById('#container');
+
+ReactDOM.render(<Clusterize rows={rows} />, mountNode);
+```
 
 ## API
 
@@ -29,7 +43,7 @@ Demo: https://cheton.github.io/react-clusterize
 
 Name | Type | Default | Description 
 :--- | :--- | :------ | :----------
-rows | array | | An array of React elements or HTML tags in String.
+rows | array | [] | An array of React elements or HTML tags in String.
 scrollTop | number | 0 | Set the current vertical position of the scroll bar.
 
 ## License
