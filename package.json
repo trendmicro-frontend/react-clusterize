@@ -51,7 +51,8 @@
     "react-dom": "^0.14.0 || ^15.0.0"
   },
   "dependencies": {
-    "clusterize.js": "^0.17.6"
+    "clusterize.js": "^0.17.6",
+    "prop-types": "^15.5.8"
   },
   "devDependencies": {
     "@trendmicro/react-buttons": "^1.0.3",

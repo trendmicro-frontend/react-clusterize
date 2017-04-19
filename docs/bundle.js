@@ -26008,6 +26008,10 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _class, _temp2;
 
+var _propTypes = __webpack_require__("../node_modules/prop-types/index.js");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _react = __webpack_require__("../node_modules/react/react.js");
 
 var _react2 = _interopRequireDefault(_react);
@@ -26160,8 +26164,8 @@ var Clusterize = (_temp2 = _class = function (_Component) {
 
     return Clusterize;
 }(_react.Component), _class.propTypes = {
-    rows: _react.PropTypes.array,
-    scrollTop: _react.PropTypes.number
+    rows: _propTypes2.default.array,
+    scrollTop: _propTypes2.default.number
 }, _class.defaultProps = {
     rows: [],
     scrollTop: 0
@@ -26459,4 +26463,4 @@ _reactDom2.default.render(_react2.default.createElement(App, null), document.get
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?7a1e116476d94ec77f69
+//# sourceMappingURL=bundle.js.map?e9b7e6e4c44699978fa3
