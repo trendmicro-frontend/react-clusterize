@@ -2,11 +2,7 @@
   "name": "react-clusterize",
   "description": "A Clusterize.js component for React",
   "authors": [
-    {
-      "name": "Cheton Wu",
-      "email": "cheton@gmail.com",
-      "homepage": "https://github.com/cheton"
-    }
+    "Cheton Wu <cheton_wu@trend.com.tw>"
   ],
   "homepage": "https://github.com/cheton/react-clusterize",
   "snapshots": [],
