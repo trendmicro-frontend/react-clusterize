@@ -26036,20 +26036,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ensureArray = function ensureArray() {
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-        args[_key] = arguments[_key];
-    }
-
-    if (args.length === 0 || args[0] === undefined || args[0] === null) {
-        return [];
-    }
-    if (args.length === 1) {
-        return [].concat(args[0]);
-    }
-    return [].concat(args);
-};
-
 var Clusterize = (_temp2 = _class = function (_Component) {
     _inherits(Clusterize, _Component);
 
@@ -26060,8 +26046,8 @@ var Clusterize = (_temp2 = _class = function (_Component) {
 
         _classCallCheck(this, Clusterize);
 
-        for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-            args[_key2] = arguments[_key2];
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
         }
 
         return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Clusterize.__proto__ || Object.getPrototypeOf(Clusterize)).call.apply(_ref, [this].concat(args))), _this), _this.clusterize = null, _this.scrollElem = null, _this.contentElem = null, _temp), _possibleConstructorReturn(_this, _ret);
@@ -26072,13 +26058,9 @@ var Clusterize = (_temp2 = _class = function (_Component) {
         value: function componentDidMount() {
             var scrollElem = _reactDom2.default.findDOMNode(this.scrollElem);
             var contentElem = _reactDom2.default.findDOMNode(this.contentElem);
-            var rows = ensureArray(this.props.rows).map(function (row) {
+            var rows = this.props.rows.map(function (row) {
                 if (typeof row === 'string') {
-                    return _server2.default.renderToString(_react2.default.createElement(
-                        'div',
-                        null,
-                        row
-                    ));
+                    return row;
                 }
                 return _react2.default.isValidElement(row) ? _server2.default.renderToString(row) : null;
             });
@@ -26101,10 +26083,6 @@ var Clusterize = (_temp2 = _class = function (_Component) {
     }, {
         key: 'shouldComponentUpdate',
         value: function shouldComponentUpdate(nextProps, nextState) {
-            if (nextProps.rows !== this.props.rows) {
-                return true;
-            }
-
             return false;
         }
     }, {
@@ -26115,13 +26093,9 @@ var Clusterize = (_temp2 = _class = function (_Component) {
                 return;
             }
             if (nextProps.rows !== this.props.rows) {
-                var rows = ensureArray(nextProps.rows).map(function (row) {
+                var rows = nextProps.rows.map(function (row) {
                     if (typeof row === 'string') {
-                        return _server2.default.renderToString(_react2.default.createElement(
-                            'div',
-                            null,
-                            row
-                        ));
+                        return row;
                     }
                     return _react2.default.isValidElement(row) ? _server2.default.renderToString(row) : null;
                 });
@@ -26463,4 +26437,4 @@ _reactDom2.default.render(_react2.default.createElement(App, null), document.get
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?e9b7e6e4c44699978fa3
+//# sourceMappingURL=bundle.js.map?d09bd73ac4134ec63020

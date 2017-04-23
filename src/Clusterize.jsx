@@ -4,16 +4,6 @@ import ReactDOM from 'react-dom';
 import ReactDOMServer from 'react-dom/server';
 import ClusterizeJS from 'clusterize.js';
 
-const ensureArray = (...args) => {
-    if (args.length === 0 || args[0] === undefined || args[0] === null) {
-        return [];
-    }
-    if (args.length === 1) {
-        return [].concat(args[0]);
-    }
-    return [].concat(args);
-};
-
 class Clusterize extends Component {
     static propTypes = {
         rows: PropTypes.array,
@@ -31,9 +21,9 @@ class Clusterize extends Component {
     componentDidMount() {
         const scrollElem = ReactDOM.findDOMNode(this.scrollElem);
         const contentElem = ReactDOM.findDOMNode(this.contentElem);
-        const rows = ensureArray(this.props.rows).map(row => {
+        const rows = this.props.rows.map(row => {
             if (typeof row === 'string') {
-                return ReactDOMServer.renderToString(<div>{row}</div>);
+                return row;
             }
             return React.isValidElement(row) ? ReactDOMServer.renderToString(row) : null;
         });
@@ -52,10 +42,6 @@ class Clusterize extends Component {
         }
     }
     shouldComponentUpdate(nextProps, nextState) {
-        if (nextProps.rows !== this.props.rows) {
-            return true;
-        }
-
         return false;
     }
     componentWillReceiveProps(nextProps) {
@@ -64,9 +50,9 @@ class Clusterize extends Component {
             return;
         }
         if (nextProps.rows !== this.props.rows) {
-            const rows = ensureArray(nextProps.rows).map(row => {
+            const rows = nextProps.rows.map(row => {
                 if (typeof row === 'string') {
-                    return ReactDOMServer.renderToString(<div>{row}</div>);
+                    return row;
                 }
                 return React.isValidElement(row) ? ReactDOMServer.renderToString(row) : null;
             });
